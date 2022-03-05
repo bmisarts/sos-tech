@@ -8,6 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
             <form class="nav-item nav-link" action="{{ url('/search') }}" method="GET">
+                @csrf
                 <div class="input-group mb-3">
                     <input type="text" name="query" class="form-control" placeholder="Rechercher..." aria-label="Recipient's username" aria-describedby="button-addon2">
                     <button class="btn btn1 text-white" type="submit" id="button-addon2">Ok</button>
