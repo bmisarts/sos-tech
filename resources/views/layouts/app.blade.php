@@ -31,26 +31,9 @@
 
     <!-- Template Stylesheet -->
     <link href="assets/css/style.css" rel="stylesheet">
-
-    <!-- loader start -->
-    <script>
-        function loader() {
-            alert("Page is loaded");
-        }
-    </script>
-    <style>
-        .loading {
-            text-align:center;
-            color: #5b4385;
-        }
-    </style>
-    <!-- loader end -->
-
 </head>
 
-<body onload="loader()">
-        <h1 class="loading">GeeksforGeeks</h1>
-        <h2 class="loading">onload event attribute</h2>>
+<body">
 
     @include('includes.navbar')
 

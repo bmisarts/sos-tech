@@ -103,21 +103,25 @@ h6,
     bottom: 45px;
     z-index: 99;
 }
-
+nav{
+    height: 80px;
+}
 .navbar-light .navbar-nav .nav-link {
     font-family: 'Jost', sans-serif;
     position: relative;
-    margin-left: 30px;
-    padding: 30px 0;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 20px 0px;
     font-size: 20px;
     font-weight: 500;
     color: var(--dark);
     outline: none;
     transition: .5s;
 }
-
 .sticky-top.navbar-light .navbar-nav .nav-link {
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
@@ -309,4 +313,7 @@ h6,
     background-color: transparent;
     border: 2px solid #d188f3;
     color: #d188f3;
+}
+body{
+    padding: 0px;
 }
