@@ -1,7 +1,25 @@
 /********** Template CSS **********/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Serif&family=PT+Serif&family=Playfair+Display&family=Poppins:wght@200;400&display=swap');
+html, body{
+    font-family: 'Libre Baskerville', serif;
+}
+.btn1{
+    background-color: #5b4385;
+    border: none;
+}
+.btn2{
+    background-color: #d188f3; 
+    border: none;
+}
+.fg1{
+    color: #5b4385;
+}
+.fg2{
+    color: #d188f3;
+}
 :root {
-    --primary: #2878EB;
-    --secondary: #F14D5D;
+    --primary: #5b4385;
+    --secondary: #d188f3;
     --light: #ECF4FF;
     --dark: #120F2D;
 }
@@ -280,4 +298,15 @@ h6,
     border: 13px solid;
     border-color: transparent #D34351 #D34351 transparent;
     z-index: -1;
+}
+
+.btn1 :hover {
+    background-color: transparent;
+    border: 2px solid #5b4385;
+    color: #5b4385;
+}
+.btn2 :hover {
+    background-color: transparent;
+    border: 2px solid #d188f3;
+    color: #d188f3;
 }

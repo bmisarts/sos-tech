@@ -21,6 +21,7 @@ class CategoryController extends Controller
             ->with('category', 'user')
             ->withCount('comments')
             ->published()
+            ->orderBy('created_at', 'DESC')
             ->paginate(5);
         
         return view('category.index', compact('posts', 'category'));

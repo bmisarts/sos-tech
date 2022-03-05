@@ -17,9 +17,10 @@ class PostController extends Controller
         $posts = Post::with('category', 'user')
             ->withCount('comments')
             ->published()
+            ->orderBy('created_at', 'DESC')
             ->paginate(5);
 
-        return view('home', compact('posts'));
+        return view('blog', compact('posts'));
     }
 
     public function search(Request $request)
@@ -33,6 +34,7 @@ class PostController extends Controller
             ->with('category', 'user')
             ->withCount('comments')
             ->published()
+            ->orderBy('created_at', 'DESC')
             ->paginate(5);
 
         return view('post.search', compact('posts'));
@@ -73,14 +75,19 @@ class PostController extends Controller
             'category'   => 'required|exists:categories,id',
             'publish'    => 'accepted'
         ]);
-
-        $post = Post::create([
-            'title'         => $request->title,
-            'body'          => $request->body,
-            'user_id'       => auth()->id(),
-            'category_id'   => $request->category,
-            'is_published'  => $request->has('publish'),
-        ]);
+        $datas = $request->all();
+        if (isset($datas['image'])) {
+            $imageName = time() . '.' . $datas['image']->getClientOriginalExtension();
+            $datas['image']->move('assets/images/blog', $imageName
+            );
+            $datas['image'] = 'assets/images/blog/'. $imageName;
+        }
+        $datas['title'] = $request->title;
+        $datas['body'] = $request->body;
+        $datas['user_id'] = auth()->id();
+        $datas['category_id'] = $request->category;
+        $datas['is_published'] = $request->has('publish');
+        $post = Post::create($datas);
 
         session()->flash('message', 'Post created successfully.');
 

@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="card-body">
-                <form action="{{ route('user.posts.store') }}" method="POST">
+                <form action="{{ route('user.posts.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
 
@@ -38,6 +38,10 @@
                                     <strong>{{ $message }}</strong>
                                 </span> 
                             @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="">Image</label>
+                            <input type="file" name="image" accept="image/png, image/gif, image/jpeg">
                         </div>
 
                         <div class="form-group">

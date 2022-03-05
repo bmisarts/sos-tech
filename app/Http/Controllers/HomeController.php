@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -21,8 +22,44 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function home()
     {
-        return view('home');
+        $posts = Post::with('category', 'user')
+            ->withCount('comments')
+            ->published()
+            ->orderBy('created_at', 'DESC')
+            ->paginate(2);
+
+        return view('home', compact('posts'));
+    }
+    public function about()
+    {
+        $posts = Post::with('category', 'user')
+            ->withCount('comments')
+            ->published()
+            ->orderBy('created_at', 'DESC')
+            ->paginate(2);
+
+        return view('about', compact('posts'));
+    }
+    public function service()
+    {
+        $posts = Post::with('category', 'user')
+            ->withCount('comments')
+            ->published()
+            ->orderBy('created_at', 'DESC')
+            ->paginate(2);
+
+        return view('service', compact('posts'));
+    }
+    public function contact()
+    {
+        $posts = Post::with('category', 'user')
+            ->withCount('comments')
+            ->published()
+            ->orderBy('created_at', 'DESC')
+            ->paginate(2);
+
+        return view('contact', compact('posts'));
     }
 }

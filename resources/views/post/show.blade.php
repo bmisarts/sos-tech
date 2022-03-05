@@ -1,6 +1,16 @@
 @extends('layouts.app')
 
 @section('body')
+    <div class="container-fluid bg-primary p-5 hero-header mb-5">
+        <div class="row py-5">
+            <div class="col-12 text-center">
+                <h1 class="display-1 text-white animated zoomIn">Articles</h1>
+                <a href="{{ url('/posts/'.$post->id) }}" class="h4 text-white">{{ $post->title }}</a>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+   
 <!-- Page Content -->
 <div class="container">
 
@@ -28,7 +38,7 @@
             <hr>
 
             <!-- Date/Time -->
-            <p>Posted on {{ $post->created_at->toDayDateTimeString() }}</p>
+            <p>Posted on {{ $post->created_at->diffForHumans() }}</p>
 
             <hr>
 

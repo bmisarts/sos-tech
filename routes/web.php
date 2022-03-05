@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes(['verify' => false, 'reset' => false]);
 
-Route::get('/', 'PostController@index');
+Route::get('/', 'HomeController@home');
+Route::get('/about', 'HomeController@about');
+Route::get('/service', 'HomeController@service');
+Route::get('/contact', 'HomeController@contact');
+Route::get('/blog', 'PostController@index');
 Route::get('search', 'PostController@search');
 Route::get('posts/{post}', 'PostController@show')->name('posts.show');
 

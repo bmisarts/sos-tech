@@ -7,7 +7,7 @@
         
             <div class="col-md-8">
 
-                <h3 class="my-4">Your search for
+                <h3 class="my-4">Votre recherche de
                     <small>"{{ request('query') }}"</small>
                 </h3>
 
