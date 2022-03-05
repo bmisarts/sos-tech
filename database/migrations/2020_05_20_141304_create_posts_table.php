@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->integer('category_id')->unsigned();
             $table->boolean('is_published')->default(false);
-            $table->text('image')->default('assets/img/blog-1.jpg');
+            $table->string('image')->default('assets/img/blog-1.jpg');
             $table->timestamps();
         });
     }
