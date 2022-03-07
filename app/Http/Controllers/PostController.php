@@ -20,7 +20,8 @@ class PostController extends Controller
             ->orderBy('created_at', 'DESC')
             ->paginate(5);
 
-        return view('blog', compact('posts'));
+        $r_posts = Post::orderBy('created_at', 'DESC')->take(10)->get();
+        return view('blog', compact('posts', 'r_posts'));
     }
 
     public function search(Request $request)
@@ -37,14 +38,17 @@ class PostController extends Controller
             ->orderBy('created_at', 'DESC')
             ->paginate(5);
 
-        return view('post.search', compact('posts'));
+            $r_posts = Post::orderBy('created_at', 'DESC')->take(10)->get();
+            return view('post.search', compact('posts', 'r_posts'));
     }
 
-    public function show(Post $post)
+    public function show($post_id)
     {
+        $post = Post::where('id', $post_id)->first();
         $post = $post->load(['comments.user', 'user', 'category']);
 
-        return view('post.show', compact('post'));
+        $r_posts = Post::orderBy('created_at', 'DESC')->take(10)->get();
+        return view('post.show', compact('post', 'r_posts'));
     }
 
     public function comment(Request $request, Post $post)

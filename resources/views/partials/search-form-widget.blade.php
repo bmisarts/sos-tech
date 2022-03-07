@@ -4,10 +4,10 @@
     <div class="card-body">
         <form action="{{ url('/search') }}" method="GET">
             <div class="input-group">
-                <input type="text" class="form-control" name="query" placeholder="Je recherche..." required>
-                <span class="input-group-btn">
-                    <button class="btn btn2 text-light" type="submit">Ok</button>
-                </span>
+                <div class="input-group">
+                    <input class="form-control p-3" type="text" class="form-control" name="query" placeholder="Je recherche..." required>
+                    <button class="btn btn-primary px-4 btn1" type="submit"><i class="bi bi-search"></i></button>
+                </div>
             </div>
         </form>
     </div>

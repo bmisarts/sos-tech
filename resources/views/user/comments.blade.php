@@ -10,7 +10,7 @@
                 
                 <div class="card-body">
                     <div class="card-title d-flex justify-content-between align-items-center">
-                        <span class="display-4"> Comments</span>
+                        <span class="display-4"> Commentaires</span>
                         
                         {{-- <a href="{{ route('user.categories.create') }}" class="btn btn-primary">Create New</a> --}}
                         
@@ -19,8 +19,8 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>User</th>
-                                <th>Comment</th>
+                                <th>Utilisateur</th>
+                                <th>Commentaire</th>
                                 <th>Post</th>
                                 <th>Action</th>
                             </tr>
@@ -36,7 +36,7 @@
                                         <form action="{{ route('user.comments.destroy', $comment) }}" method="POST">
                                             @csrf @method('DELETE')
 
-                                            <button class="btn btn-xs btn-danger" type="submit">Delete</button>
+                                            <button class="btn btn-xs  btn1 text-white" type="submit">Supprimer</button>
                                         </form>
                                     </td>
                                 </tr>

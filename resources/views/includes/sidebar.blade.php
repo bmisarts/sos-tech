@@ -4,5 +4,6 @@
     @include('partials.search-form-widget')
 
     @include('partials.category-widget')
+    @include('partials.recent-posts')
 
 </div>

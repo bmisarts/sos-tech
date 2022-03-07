@@ -34,32 +34,14 @@ class HomeController extends Controller
     }
     public function about()
     {
-        $posts = Post::with('category', 'user')
-            ->withCount('comments')
-            ->published()
-            ->orderBy('created_at', 'DESC')
-            ->paginate(2);
-
-        return view('about', compact('posts'));
+        return view('about');
     }
     public function service()
     {
-        $posts = Post::with('category', 'user')
-            ->withCount('comments')
-            ->published()
-            ->orderBy('created_at', 'DESC')
-            ->paginate(2);
-
-        return view('service', compact('posts'));
+        return view('service');
     }
     public function contact()
     {
-        $posts = Post::with('category', 'user')
-            ->withCount('comments')
-            ->published()
-            ->orderBy('created_at', 'DESC')
-            ->paginate(2);
-
-        return view('contact', compact('posts'));
+        return view('contact');
     }
 }

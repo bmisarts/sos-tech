@@ -12,18 +12,18 @@
                     <div class="card-title d-flex justify-content-between align-items-center">
                         <span class="display-4"> Posts</span>
                         
-                        <a href="{{ route('user.posts.create') }}" class="btn btn-primary">Create New</a>
+                        <a href="{{ route('user.posts.create') }}" class="btn btn1 text-white">Poster</a>
                     </div>
                     
-                    <table class="table">
+                    <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>Title</th>
-                                <th>Body</th>
-                                <th>Author</th>
-                                <th>Category</th>
-                                <th>Published</th>
-                                <th>Action</th>
+                                <th>Titre</th>
+                                <th>Corps</th>
+                                <th>Auteur</th>
+                                <th>Catégorie</th>
+                                <th>Public</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -35,19 +35,19 @@
                                     <td>{{ $post->category->name }}</td>
                                     <td>{{ $post->published }}</td>
                                     <td class="d-flex">
-                                        <a href="{{ route('posts.show', $post) }}" class="btn btn-xs btn-success">Show</a>
-                                        <a href="{{ route('user.posts.edit', $post) }}" class="btn btn-xs btn-info">Edit</a>
+                                        <a href="{{ route('posts.show', $post) }}" class="btn btn-xs btn2 text-white"><i class="fa fa-eye"></i></a>
+                                        <a href="{{ route('user.posts.edit', $post) }}" class="btn btn-xs btn-primary"><i class="fa fa-pen"></i></a>
 
                                         <form action="{{ route('user.posts.destroy', $post) }}" method="POST">
                                             @csrf @method('DELETE')
 
-                                            <button class="btn btn-xs btn-danger" type="submit">Delete</button>
+                                            <button class="btn btn-xs btn1 text-white" type="submit"><i class="fa fa-trash"></i></button>
                                         </form>
                                     </td>
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="6">No post available.</td>
+                                    <td colspan="6">Aucune publication disponible.</td>
                                 </tr>
                             @endforelse
                         </tbody>

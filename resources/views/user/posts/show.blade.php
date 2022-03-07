@@ -2,7 +2,7 @@
 
 @section('body')
 
-    <div class="container-fluid bg-primary p-5 hero-header mb-5">
+    <div class="container-fluid bg2 p-5 hero-header mb-5">
         <div class="row py-5">
             <div class="col-12 text-center">
                 <h1 class="display-1 text-white animated zoomIn">Article</h1>
@@ -34,7 +34,7 @@
              <!-- Category -->
              <p>
                 <a href="{{ $post->category->path() }}">
-                    <span class="badge badge bg2 text-white">{{ $post->category->name }}</span>
+                    <span class="badge badge-pill fg2">{{ $post->category->name }}</span>
                 </a>
             </p>
 
@@ -47,7 +47,7 @@
             <!-- Comments Form -->
             @auth @include('partials.comment-form') @endauth
 
-            <h3>Commentaires</h3>
+            <h3>Commententaires</h3>
 
             <hr>
 

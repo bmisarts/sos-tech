@@ -1,7 +1,15 @@
 /********** Template CSS **********/
+/********** Template CSS **********/
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Serif&family=PT+Serif&family=Playfair+Display&family=Poppins:wght@200;400&display=swap');
 html, body{
     font-family: 'Libre Baskerville', serif;
+    padding-top: 15px;
+}
+.bg1{
+    background-color: #5b4385;
+}
+.bg2{
+    background-color: #d188f3; 
 }
 .btn1{
     background-color: #5b4385;
@@ -103,26 +111,24 @@ h6,
     bottom: 45px;
     z-index: 99;
 }
-nav{
-    height: 80px;
-}
+
 .navbar-light .navbar-nav .nav-link {
-    font-family: 'Jost', sans-serif;
-    position: relative;
     margin-left: 20px;
     margin-bottom: 0px;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-right: 20px;
-    padding: 20px 0px;
+    padding: 0px 0px;
     padding-bottom: 0px 0px;
     font-size: 20px;
     font-weight: 500;
     color: var(--dark);
     outline: none;
+    position: relative;
     transition: .5s;
 }
+
 .sticky-top.navbar-light .navbar-nav .nav-link {
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
@@ -301,20 +307,6 @@ nav{
     top: -25px;
     left: 0;
     border: 13px solid;
-    border-color: transparent #D34351 #D34351 transparent;
+    border-color: transparent #d188f3 #d188f3 transparent;
     z-index: -1;
-}
-
-.btn1 :hover {
-    background-color: transparent;
-    border: 2px solid #5b4385;
-    color: #5b4385;
-}
-.btn2 :hover {
-    background-color: transparent;
-    border: 2px solid #d188f3;
-    color: #d188f3;
-}
-body{
-    padding: 0px;
 }

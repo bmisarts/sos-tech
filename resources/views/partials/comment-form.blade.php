@@ -8,7 +8,7 @@
                 <textarea class="form-control" name="body" rows="3"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary">Commenter</button>
+            <button type="submit" class="btn btn1 text-white">Commenter</button>
         </form>
     </div>
 </div>

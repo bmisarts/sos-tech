@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0 nav-inverse">
     <a href="{{ url('/') }}" class="navbar-brand ms-lg-5">
         <h1 class="display-5 m-0" style="color: #6b4f9b;">S<span style="color: #b68cc8">O</span><span style="color: #6b4f9b">S</span></h1>
     </a>
@@ -11,7 +11,7 @@
                 @csrf
                 <div class="input-group mb-3">
                     <input type="text" name="query" class="form-control" placeholder="Rechercher..." aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button class="btn btn1 text-white" type="submit" id="button-addon2">Ok</button>
+                    <button class="btn btn1 text-white" type="submit" id="button-addon2"><i class="fa fa-search"></i></button>
                 </div>
             </form>
             <a href="{{ url('/') }}" class="nav-item nav-link">Accueil</a>
@@ -64,3 +64,4 @@
     </div>
 </nav>
     <!-- Navbar End -->
+

@@ -9,17 +9,15 @@
 
         <div class="col-12">
             <div class="card">
-                <div class="card-header">
-                    Create Category
+                <div class="card-header bg1 text-white">
+                    Créer une catégorie
                 </div>
 
                 <div class="card-body">
                 <form action="{{ route('user.categories.store') }}" method="POST">
                     @csrf
-
-
                         <div class="form-group">
-                            <label for="">Name</label>
+                            <label for="">Nom</label>
                             <input type="text" name="name" value="{{ old('name') }}" required class="form-control">
 
                             @error('name')
@@ -29,7 +27,7 @@
                             @enderror
                         </div>
 
-                        <button class="btn btn-primary" type="submit">Create</button>
+                        <button class="btn  btn1 text-white" type="submit">Créer</button>
 
                     </form>
                 </div>

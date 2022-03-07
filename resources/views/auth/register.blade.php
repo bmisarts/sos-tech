@@ -4,11 +4,11 @@
     <form class="form-signin" action="{{ route('register') }}" method="POST">
         @csrf
 
-        <h1 class="h3 mb-3 font-weight-normal">Register Account</h1>
+        <h1 class="h3 mb-3 font-weight-normal">Créer un compte</h1>
 
         <div class="form-group">
-            <label for="inputName" class="sr-only">Username</label>
-            <input type="text" name="name" class="form-control" placeholder="Name" value="{{ old('name') }}" required="">
+            <label for="inputName" class="sr-only">Nom d'utilisateur</label>
+            <input type="text" name="name" class="form-control" placeholder="Nom" value="{{ old('name') }}" required="">
 
             @error('name')
                 <span class="text-danger" role="alert">
@@ -19,8 +19,8 @@
 
         
         <div class="form-group">
-            <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" name="email" class="form-control" placeholder="Email address" value="{{ old('email') }}" required="">
+            <label for="inputEmail" class="sr-only">Adresse e-mail</label>
+            <input type="email" name="email" class="form-control" placeholder="E-mail" value="{{ old('email') }}" required="">
 
             @error('email')
                 <span class="text-danger" role="alert">
@@ -30,8 +30,8 @@
         </div>
         
         <div class="form-group">
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" name="password" class="form-control" placeholder="Password" required="">
+            <label for="inputPassword" class="sr-only">Mot de passe</label>
+            <input type="password" name="password" class="form-control" placeholder="Mot de passe" required="">
 
             @error('password')
                 <span class="text-danger" role="alert">
@@ -41,8 +41,8 @@
         </div>
 
         <div class="form-group">
-            <label for="inputPasswordConfirmation" class="sr-only">Password Confirmation</label>
-            <input type="password" name="password_confirmation" class="form-control" placeholder="Password Confirmation" required="">
+            <label for="inputPasswordConfirmation" class="sr-only">Confirmation mot de passe</label>
+            <input type="password" name="password_confirmation" class="form-control" placeholder="Confirmation" required="">
 
             @error('password_confirmation')
                 <span class="text-danger" role="alert">
@@ -50,17 +50,10 @@
                 </span>
             @enderror
         </div>
-
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
-        </div>
-
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">S'inscrire</button>
 
     
-        <p class="mt-5 mb-3 text-muted">© Simple Larablog {{ now()->year}}</p>
-        <p>Already have an account? <a href="{{ route('login') }}">Login here</a></p>
+        <a  href="{{ url('/') }}"><p class="mt-5 mb-3 text-muted">© {{ config('app.name').' '.now()->year}}</p></a>
+        <p>Vous avez déjà un compte? <a href="{{ route('login') }}">Connectez-vous ici</a></p>
     </form>
 @endsection

@@ -25,7 +25,7 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase animated bounceInDown">Assurance qualité</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Installation et configuration des meilleurs systèmes d'alarme et de sécurité</h1>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Installation et configuration des meilleurs systèmes de sécurité</h1>
                             <a href="{{ url('/contact') }}" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight btn2">Demander un devis</a>
                         </div>
                     </div>
@@ -57,107 +57,13 @@
 
 
     <!-- About Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="row gx-5">
-                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.3s" src="assets/img/about.jpg" style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="mb-4">
-                        <h5 class="fg1">A propos de nous</h5>
-                        <h6 class="display-5 mb-0">Nous offrons des services de qualité en vidéosurveillance</h6>
-                    </div>
-                    <p class="mb-4">Sollicitez-nous pour bénéficier de solutions de sécurité efficaces et modernes. Vous voulez sécuriser l’entrée ou les alentours de votre maison ? Vous souhaitez contrôler l’accès ou surveiller tous les endroits sensibles de vos locaux commerciaux (incluant les immeubles à logement et les condominium) ?</p>
-                    <p class="mb-4">Contactez-nous pour installer divers systèmes de sécurité : alarme, contrôle d’accès, caméras de surveillance… Nous sommes également en mesure de réparer, de rénover ou d’entretenir des installations existantes.</p>
-                    <div class="row g-3">
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.6s">
-                            <div class="btn1 d-flex flex-column justify-content-center text-center border-bottom border-5 border-secondary rounded p-3 fg1" style="height: 200px;">
-                                <i class="fa fa-star fa-4x text-white mb-4"></i>
-                                <h4 class="text-white mb-0">15 Clients satisfaits</h4>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.9s">
-                            <div class="btn2 d-flex flex-column justify-content-center text-center border-bottom border-5 border-primary rounded p-3 fg2" style="height: 200px;">
-                                <i class="fa fa-award fa-4x text-white mb-4"></i>
-                                <h4 class="text-white mb-0">2ans d'expérience</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('includes.about')
     <!-- About End -->
     
 
     <!-- Services Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-            <h5 class="fg1">Services</h5>
-                <h6 class="display-5 mb-0">Nos excellents services de sécurité</h6>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="service-item bg-light border-bottom border-5 border-primary rounded">
-                        <div class="position-relative p-5">
-                            <i class="flaticon-cctv d-block display-1 fw-normal fg2 mb-3"></i>
-                            <h5 class="fg1 mb-0">Vidéosurveillance</h5>
-                            <h3 class="mb-3">Installation</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="service-item bg-light border-bottom border-5 border-primary rounded">
-                        <div class="position-relative p-5">
-                            <i class="flaticon-surveillance d-block display-1 fw-normal fg2 mb-3"></i>
-                            <h5 class="fg1 mb-0">Vidéosurveillance</h5>
-                            <h3 class="mb-3">Configuration</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-                    <div class="service-item bg-light border-bottom border-5 border-primary rounded">
-                        <div class="position-relative p-5">
-                            <i class="flaticon-camera d-block display-1 fw-normal fg2 mb-3"></i>
-                            <h5 class="fg1 mb-0">Vidéosurveillance</h5>
-                            <h3 class="mb-3">Maintenance</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="service-item bg-light border-bottom border-5 border-primary rounded">
-                        <div class="position-relative p-5">
-                            <i class="flaticon-double d-block display-1 fw-normal fg2 mb-3"></i>
-                            <h5 class="fg1 mb-0">Vidéosurveillance</h5>
-                            <h3 class="mb-3">Réparation</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="service-item bg-light border-bottom border-5 border-primary rounded">
-                        <div class="position-relative p-5">
-                            <i class="flaticon-security-system d-block display-1 fw-normal fg2 mb-3"></i>
-                            <h5 class="fg1 mb-0">Vidéosurveillance</h5>
-                            <h3 class="mb-3">Surveillance</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-                    <div class="service-item bg-light border-bottom border-5 border-primary rounded">
-                        <div class="position-relative p-5">
-                            <i class="flaticon-recorder d-block display-1 fw-normal fg2 mb-3"></i>
-                            <h5 class="fg1 mb-0">Vidéosurveillance</h5>
-                            <h3 class="mb-3">Contrôle d'accès</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   
+    @include('includes.service')
     <!-- Services End -->
 
 
@@ -370,8 +276,8 @@
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-                <h5 class="fg1">Articles de blog</h5>
-                <h1 class="display-5 mb-0">Derniers articles de notre blog</h1>
+                <h5 class="fg1">Blog</h5>
+                <h1 class="display-5 mb-0">Derniers articles du blog</h1>
             </div>
             <div class="row g-5">
                 @foreach($posts as $post)

@@ -13,8 +13,8 @@
         </h2>
         <p class="card-text">{{ substr($post->body, 0, 200) }}</p>
         <img src="{{$post->image}}" alt="" style="width:100%">
-        <a href="{{ $post->path() }}" class="btn btn-primary text-white">
-            Lire plus &rarr;
+        <a href="{{ $post->path() }}" class="btn btn1 text-white mt-1">
+            Lire Plus
         </a>
     </div>
     <div class="card-footer text-muted">

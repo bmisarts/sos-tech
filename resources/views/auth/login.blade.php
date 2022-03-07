@@ -4,11 +4,11 @@
     <form class="form-signin" action="{{ route('login') }}" method="POST">
         @csrf
 
-        <h1 class="h3 mb-3 font-weight-normal">Sign In</h1>
+        <h1 class="h3 mb-3 font-weight-normal">S'identifier</h1>
 
         <div class="form-group">
-            <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" name="email" class="form-control" placeholder="Email address" required="">
+            <label for="inputEmail" class="sr-only">Adresse e-mail</label>
+            <input type="email" name="email" class="form-control" placeholder="Adresse e-mail" required="">
 
             @error('email')
                 <span class="text-danger" role="alert">
@@ -18,8 +18,8 @@
         </div>
 
         <div class="form-group">
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" name="password" class="form-control" placeholder="Password" required="">
+            <label for="inputPassword" class="sr-only">Mot de passe</label>
+            <input type="password" name="password" class="form-control" placeholder="Mot de passe" required="">
 
             @error('password')
                 <span class="text-danger" role="alert">
@@ -30,14 +30,14 @@
 
         <div class="checkbox mb-3">
             <label>
-                <input type="checkbox" value="remember-me"> Remember me
+                <input type="checkbox" value="remember-me">Se souvienir de moi
             </label>
         </div>
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
 
     
-        <p class="mt-5 mb-3 text-muted">© Simple Larablog {{ now()->year}}</p>
-        <p>New to Larablog? <a href="{{ route('register') }}">Create account</a></p>
+        <a  href="{{ url('/') }}"><p class="mt-5 mb-3 text-muted">© {{ config('app.name').' '.now()->year}}</p></a>
+        <p>Nouveau  {{ config('app.name', 'Laravel') }}? <a href="{{ route('register') }}">Créer un compte</a></p>
     </form>
 @endsection
