@@ -34,7 +34,7 @@
             </label>
         </div>
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion </button>
 
     
         <a  href="{{ url('/') }}"><p class="mt-5 mb-3 text-muted">© {{ config('app.name').' '.now()->year}}</p></a>
