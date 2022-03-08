@@ -38,6 +38,6 @@
 
     
         <a  href="{{ url('/') }}"><p class="mt-5 mb-3 text-muted">© {{ config('app.name').' '.now()->year}}</p></a>
-        <p>Nouveau  {{ config('app.name', 'Laravel') }}? <a href="{{ route('register') }}">Créer un compte</a></p>
+        <p>Nouveau sur {{ config('app.name', 'Laravel') }}? <a href="{{ route('register') }}">Créer un compte</a></p>
     </form>
 @endsection
