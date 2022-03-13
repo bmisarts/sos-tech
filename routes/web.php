@@ -13,7 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes(['verify' => false, 'reset' => false]);
+Auth::routes();
+Route::get('home', function () {
+    return redirect('/');
+});
 
 Route::get('/', 'HomeController@home');
 Route::get('/about', 'HomeController@about');
@@ -21,34 +24,42 @@ Route::get('/service', 'HomeController@service');
 Route::get('/contact', 'HomeController@contact');
 Route::get('/blog', 'PostController@index');
 Route::get('search', 'PostController@search');
-Route::get('posts/{post}', 'PostController@show')->name('posts.show');
+Route::get('posts/{id}', 'PostController@show')->name('post_show');
+Route::post('/sendemail', 'SendEmailController@sendemail')->name('sendemail');
 
-Route::post('posts/{post}/comment', 'PostController@comment')->name('post.comment');
-Route::get('categories/{category}', 'CategoryController@index')->name('category.post');
+Route::get('connexion', 'Auth\AuthController@connexion')->name('connexion');
+Route::get('account-new', 'Auth\AuthController@register')->name('new-account');
+
+Route::post('new-letter', 'Auth\AuthController@newLetter')->name('new-letter');
+Route::get('unsubscribe', 'Auth\AuthController@unsubscribe')->name('unsubscribe');
+Route::post('unsubscribe', 'Auth\AuthController@unsubscription')->name('unsubscription');
+
+Route::post('posts/{post}/comment', 'PostController@comment')->name('post_comment');
+Route::get('categories/{category}', 'CategoryController@index')->name('category_post');
 
 // Authenticated User Routes
 Route::get('dashboard', 'UserController@dashboard')->name('dashboard');
-Route::get('user/profile', 'UserController@profile')->name('profile');
-Route::get('user/posts', 'UserController@posts')->name('user.posts');
+Route::get('profile', 'UserController@profile')->name('profile');
+Route::get('posts', 'UserController@posts')->name('posts');
 
-Route::get('user/posts/create', 'PostController@create')->name('user.posts.create');
-Route::post('user/posts/create', 'PostController@store')->name('user.posts.store');
+Route::get('user/categories', 'UserController@categories')->name('categories');
+Route::get('user/comments', 'UserController@comments')->name('comments');
 
-Route::get('user/posts/{post}/edit', 'PostController@edit')->name('user.posts.edit');
-Route::patch('user/posts/{post}', 'PostController@update')->name('user.posts.update');
 
-Route::delete('user/posts/{post}', 'PostController@destroy')->name('user.posts.destroy');
+Route::get('user/posts/create', 'PostController@create')->name('post_create');
+Route::post('user/posts/create', 'PostController@store')->name('post_store');
 
-Route::get('user/categories', 'UserController@categories')->name('user.categories');
+Route::get('user/posts/{post}/edit', 'PostController@edit')->name('post_edit');
+Route::patch('user/posts/{post}', 'PostController@update')->name('post_update');
 
-Route::get('user/categories/create', 'CategoryController@create')->name('user.categories.create');
-Route::post('user/categories/create', 'CategoryController@store')->name('user.categories.store');
+Route::delete('user/posts/{post}', 'PostController@destroy')->name('post_destroy');
+Route::get('user/categories/create', 'CategoryController@create')->name('categorie_create');
+Route::post('user/categories/create', 'CategoryController@store')->name('categorie_store');
 
-Route::get('user/categories/{category}/edit', 'CategoryController@edit')->name('user.categories.edit');
-Route::patch('user/categories/{category}', 'CategoryController@update')->name('user.categories.update');
+Route::get('user/categories/{category}/edit', 'CategoryController@edit')->name('categorie_edit');
+Route::patch('user/categories/{category}', 'CategoryController@update')->name('categorie_update');
 
-Route::delete('user/categories/{category}', 'CategoryController@destroy')->name('user.categories.destroy');
+Route::delete('user/categories/{category}', 'CategoryController@destroy')->name('categorie_destroy');
 
-Route::get('user/comments', 'UserController@comments')->name('user.comments');
-Route::delete('user/comments/{comment}', 'CommentController@destroy')->name('user.comments.destroy');
+Route::delete('user/comments/{comment}', 'CommentController@destroy')->name('comment_destroy');
 

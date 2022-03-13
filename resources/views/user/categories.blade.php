@@ -12,7 +12,7 @@
                     <div class="card-title d-flex justify-content-between align-items-center">
                         <span class="display-4"> Categories</span>
                         
-                        <a href="{{ route('user.categories.create') }}" class="btn btn-primary">Créer</a>
+                        <a href="{{ route('categorie_create') }}" class="btn btn-primary">Créer</a>
                         
                     </div>
 
@@ -32,9 +32,9 @@
                                 <tr>
                                     <td>{{ $category->name }}</td>
                                     <td class="d-flex">
-                                        <a href="{{ route('user.categories.edit', $category) }}" class="btn btn-xs btn2 text-white"><i class="fa fa-eye"></i></a>
+                                        <a href="{{ route('categorie_edit', $category) }}" class="btn btn-xs btn2 text-white"><i class="fa fa-pen"></i></a>
 
-                                        <form action="{{ route('user.categories.destroy', $category) }}" method="POST">
+                                        <form action="{{ route('categorie_destroy', $category) }}" method="POST">
                                             @csrf @method('DELETE')
 
                                             <button class="btn btn-xs btn1 text-white" type="submit"><i class="fa fa-trash"></i></button>
@@ -43,7 +43,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="6">No categories available.</td>
+                                    <td class="text-center" colspan="6">Aucune catégorie disponible.</td>
                                 </tr>
                             @endforelse
                         </tbody>

@@ -11,8 +11,8 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Value</th>
+                        <th scope="col">Libelle</th>
+                        <th scope="col">Valeur</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -22,7 +22,7 @@
                     </tr>
 
                     <tr>
-                        <th scope="row">Name</th>
+                        <th scope="row">Nom</th>
                         <td>{{ auth()->user()->name }}</td>
                     </tr>
 
@@ -32,7 +32,7 @@
                     </tr>
 
                     <tr>
-                        <th scope="row">Joined</th>
+                        <th scope="row">Membre depuis</th>
                         <td>{{ auth()->user()->updated_at->diffForHumans() }}</td>
                     </tr>
                 </tbody>

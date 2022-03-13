@@ -5,9 +5,9 @@
     <div class="container-fluid p-0 mb-5">
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" id="toHide" data-bs-target="#header-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" id="toHide" data-bs-target="#header-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" id="toHide" data-bs-target="#header-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
               </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -16,7 +16,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase animated bounceInDown">Alerte</h5>
                             <h1 class="display-1 text-white mb-md-4 animated zoomIn">Sécurisez vos lieux de services et vos domiciles</h1>
-                            <a href="{{ url('/contact') }}" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight btn2">Demander un devis</a>
+                            <a href="{{ url('/contact') }}" id="toHide" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight btn2" style="border-radius: 50px; border: none">Demander un devis</a>
                         </div>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase animated bounceInDown">Assurance qualité</h5>
                             <h1 class="display-1 text-white mb-md-4 animated zoomIn">Installation et configuration des meilleurs systèmes de sécurité</h1>
-                            <a href="{{ url('/contact') }}" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight btn2">Demander un devis</a>
+                            <a href="{{ url('/contact') }}" id="toHide" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight btn2" style="border-radius: 50px; border: none">Demander un devis</a>
                         </div>
                     </div>
                 </div>
@@ -36,17 +36,17 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase animated bounceInDown">Meilleurs services de sécurité</h5>
                             <h1 class="display-1 text-white mb-md-4 animated zoomIn">Maison sûre et sécurisée pour vous et votre famille</h1>
-                            <a href="{{ url('/contact') }}" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight btn2">Demander un devis</a>
+                            <a href="{{ url('/contact') }}" id="toHide" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight btn2" style="border-radius: 50px; border: none">Demander un devis</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+            <button class="carousel-control-prev" id="toHide" type="button" data-bs-target="#header-carousel"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Precedent</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+            <button class="carousel-control-next" id="toHide" type="button" data-bs-target="#header-carousel"
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Suivant</span>
@@ -67,81 +67,9 @@
     <!-- Services End -->
 
 
-    <!-- Pricing Plan Start -->
-    <!-- <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 75px;">
-        <div class="container">
-            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-                <h5 class="bg1 text-uppercase" style="letter-spacing: 5px;">Pricing Plan</h5>
-                <h1 class="display-5 mb-0">Pricing Plan For CCTV Security Services</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                    <div class="position-relative border border-primary rounded">
-                        <div class="bg-primary text-center pt-5 pb-4">
-                            <h3 class="text-white">Basic Plan</h3>
-                            <h1 class="display-4 text-white">
-                                <small class="align-top"
-                                    style="font-size: 22px; line-height: 45px;">$</small>49<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
-                                    Mo</small>
-                            </h1>
-                        </div>
-                        <div class="text-center py-5">
-                            <p class="border-bottom border-light mb-2 pb-2">HTML5 & CSS3</p>
-                            <p class="border-bottom border-light mb-2 pb-2">Bootstrap v5</p>
-                            <p class="border-bottom border-light mb-2 pb-2">Responsive Layout</p>
-                            <p class="border-bottom border-light mb-2 pb-2">Browsers Compatibility</p>
-                            <p class="mb-2 pb-2">Easy to Use</p>
-                        </div>
-                        <a href="" class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Order Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-                    <div class="position-relative border border-secondary rounded">
-                        <div class="bg-secondary text-center pt-5 pb-4">
-                            <h3 class="text-white">Standard Plan</h3>
-                            <h1 class="display-4 text-white">
-                                <small class="align-top"
-                                    style="font-size: 22px; line-height: 45px;">$</small>49<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
-                                    Mo</small>
-                            </h1>
-                        </div>
-                        <div class="text-center py-5">
-                            <p class="border-bottom border-light mb-2 pb-2">HTML5 & CSS3</p>
-                            <p class="border-bottom border-light mb-2 pb-2">Bootstrap v5</p>
-                            <p class="border-bottom border-light mb-2 pb-2">Responsive Layout</p>
-                            <p class="border-bottom border-light mb-2 pb-2">Browsers Compatibility</p>
-                            <p class="mb-2 pb-2">Easy to Use</p>
-                        </div>
-                        <a href="" class="btn btn-secondary py-2 px-4 position-absolute top-100 start-50 translate-middle">Order Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-                    <div class="position-relative border border-primary rounded">
-                        <div class="bg-primary text-center pt-5 pb-4">
-                            <h3 class="text-white">Extended Plan</h3>
-                            <h1 class="display-4 text-white">
-                                <small class="align-top"
-                                    style="font-size: 22px; line-height: 45px;">$</small>49<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
-                                    Mo</small>
-                            </h1>
-                        </div>
-                        <div class="text-center py-5">
-                            <p class="border-bottom border-light mb-2 pb-2">HTML5 & CSS3</p>
-                            <p class="border-bottom border-light mb-2 pb-2">Bootstrap v5</p>
-                            <p class="border-bottom border-light mb-2 pb-2">Responsive Layout</p>
-                            <p class="border-bottom border-light mb-2 pb-2">Browsers Compatibility</p>
-                            <p class="mb-2 pb-2">Easy to Use</p>
-                        </div>
-                        <a href="" class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Order Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Pricing Plan End -->
+    <!-- clients satisfaits -->
+    @include('includes.partners')
+    <!-- clients satisfaits -->
 
 
     <!-- Offer Start -->
@@ -151,7 +79,7 @@
                 <div class="col-lg-7 text-center">
                     <div class="text-center mx-auto mb-4" style="max-width: 600px;">
                         <h5 class="text-white">Offre spéciale</h5>
-                        <h6 class="display-5 text-white">Économisez 20 % sur tous les articles de votre première commande</h6>
+                        <h6 class="display-5 text-white">Économisez 20 % pour votre première commande chez nous</h6>
                     </div>
                     <!-- <p class="text-white mb-4">Eirmod sed tempor lorem ut dolores sit kasd ipsum. Dolor ea et dolore et at sea ea at dolor justo ipsum duo rebum sea. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo lorem. Elitr ut dolores magna sit. Sea dolore sed et.</p>
                     <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Order Now</a>

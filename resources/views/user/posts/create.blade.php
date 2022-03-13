@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="card-body">
-                <form action="{{ route('user.posts.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('post_store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
 
@@ -62,11 +62,11 @@
                         <div class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" name="publish" id="publish-post" checked>
-                                <label class="custom-control-label" for="publish-post">Do you want to publish this post?</label>
+                                <label class="custom-control-label" for="publish-post">Voulez-vous publier ce post?</label>
                             </div>
                         </div>
 
-                        <button class="btn btn-primary" type="submit">Create</button>
+                        <button class="btn btn-primary" type="submit">Enregister</button>
 
                     </form>
                 </div>

@@ -21,16 +21,17 @@
             <div class="col-lg-4 col-md-6">
                 <h3 class="text-white mb-4">Suivez-nous</h3>
                 <div class="d-flex">
-                    <a class="btn btn-lg btn1 btn-lg-square rounded me-2 text-white" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-lg btn1 btn-lg-square rounded me-2 text-white" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-lg btn1 btn-lg-square rounded me-2 text-white" href="#" style=""><i class="fab fa-telegram fw-normal"></i></a>
+                    <a class="btn btn-lg btn1 btn-lg-square rounded me-2 text-white" href="https://web.facebook.com/SOServicesTech"><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-lg btn1 btn-lg-square rounded me-2 text-white" href="https://www.linkedin.com/company/78739894/admin"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-lg btn1 btn-lg-square rounded me-2 text-white" href="https://twitter.com/sosservicestech" style=""><i class="fab fa-twitter fw-normal"></i></a>
                     <a class="btn btn-lg btn1 btn-lg-square rounded text-white" href="https://api.whatsapp.com/send?phone=+237655077119"><i class="fab fa-whatsapp fw-normal"></i></a>
                 </div>
             </div>
             <div class="col-12">
-                <form class="mx-auto" style="max-width: 600px;">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-white p-3" placeholder="Votre email">
+                <form class="mx-auto" style="max-width: 600px;" action="{{ url('new-letter') }}" method="POST">
+                @csrf    
+                <div class="input-group">
+                        <input type="text" class="form-control border-white p-3" name="email" placeholder="Votre email">
                         <button class="btn btn1 text-white px-4">S'inscrire</button>
                     </div>
                 </form>

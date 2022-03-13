@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Comment;
 use App\Post;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -24,6 +25,7 @@ class UserController extends Controller
         $posts      = Post::count();
         $comments   = Comment::count();
         $categories = Category::count();
+        $users = User::count();
 
         return view('user.dashboard', get_defined_vars());
     }
@@ -38,7 +40,8 @@ class UserController extends Controller
 
     public function categories()
     {
-        return view('user.categories');
+        $categories = Category::paginate(5);
+        return view('user.categories', compact('categories'));
     }
 
     public function comments()

@@ -12,7 +12,7 @@
                     <div class="card-title d-flex justify-content-between align-items-center">
                         <span class="display-4"> Posts</span>
                         
-                        <a href="{{ route('user.posts.create') }}" class="btn btn1 text-white">Poster</a>
+                        <a href="{{ route('post_create') }}" class="btn btn1 text-white">Poster</a>
                     </div>
                     
                     <table class="table table-striped">
@@ -35,10 +35,10 @@
                                     <td>{{ $post->category->name }}</td>
                                     <td>{{ $post->published }}</td>
                                     <td class="d-flex">
-                                        <a href="{{ route('posts.show', $post) }}" class="btn btn-xs btn2 text-white"><i class="fa fa-eye"></i></a>
-                                        <a href="{{ route('user.posts.edit', $post) }}" class="btn btn-xs btn-primary"><i class="fa fa-pen"></i></a>
+                                        <a href="{{ route('post_show', $post) }}" class="btn btn-xs btn2 text-white"><i class="fa fa-eye"></i></a>
+                                        <a href="{{ route('post_edit', $post) }}" class="btn btn-xs btn-primary"><i class="fa fa-pen"></i></a>
 
-                                        <form action="{{ route('user.posts.destroy', $post) }}" method="POST">
+                                        <form action="{{ route('post_destroy', $post) }}" method="POST">
                                             @csrf @method('DELETE')
 
                                             <button class="btn btn-xs btn1 text-white" type="submit"><i class="fa fa-trash"></i></button>
@@ -47,7 +47,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="6">Aucune publication disponible.</td>
+                                    <td class="text-center" colspan="6">Aucune publication disponible.</td>
                                 </tr>
                             @endforelse
                         </tbody>

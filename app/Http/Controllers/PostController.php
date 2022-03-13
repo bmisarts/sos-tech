@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Category;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\BroadCastNotification;
 
 class PostController extends Controller
 {
@@ -14,14 +18,13 @@ class PostController extends Controller
     
     public function index(Request $request)
     {
-        $posts = Post::with('category', 'user')
-            ->withCount('comments')
+        $posts = Post::orderBy('posts.created_at', 'DESC')
+            ->with('comments','category', 'user')
             ->published()
-            ->orderBy('created_at', 'DESC')
             ->paginate(5);
-
         $r_posts = Post::orderBy('created_at', 'DESC')->take(10)->get();
-        return view('blog', compact('posts', 'r_posts'));
+        $categories = Category::get();
+        return view('blog', compact('posts', 'r_posts', 'categories'));
     }
 
     public function search(Request $request)
@@ -35,11 +38,12 @@ class PostController extends Controller
             ->with('category', 'user')
             ->withCount('comments')
             ->published()
-            ->orderBy('created_at', 'DESC')
+            ->orderBy('posts.created_at', 'DESC')
             ->paginate(5);
 
             $r_posts = Post::orderBy('created_at', 'DESC')->take(10)->get();
-            return view('post.search', compact('posts', 'r_posts'));
+            $categories = Category::get();
+            return view('post.search', compact('posts', 'r_posts', 'categories'));
     }
 
     public function show($post_id)
@@ -47,8 +51,10 @@ class PostController extends Controller
         $post = Post::where('id', $post_id)->first();
         $post = $post->load(['comments.user', 'user', 'category']);
 
+        $post->comments =  $post->comments()->orderBy('created_at', 'desc')->get();
         $r_posts = Post::orderBy('created_at', 'DESC')->take(10)->get();
-        return view('post.show', compact('post', 'r_posts'));
+        $categories = Category::get();
+        return view('post.show', compact('post', 'r_posts', 'categories'));
     }
 
     public function comment(Request $request, Post $post)
@@ -68,7 +74,8 @@ class PostController extends Controller
 
     public function create()
     {
-        return view('user.posts.create');
+        $categories = Category::get();
+        return view('user.posts.create', compact('categories'));
     }
 
     public function store(Request $request)
@@ -86,6 +93,9 @@ class PostController extends Controller
             );
             $datas['image'] = 'assets/images/blog/'. $imageName;
         }
+        else{
+            $datas['image'] = 'assets/images/blog/default.jpg';
+        }
         $datas['title'] = $request->title;
         $datas['body'] = $request->body;
         $datas['user_id'] = auth()->id();
@@ -93,9 +103,14 @@ class PostController extends Controller
         $datas['is_published'] = $request->has('publish');
         $post = Post::create($datas);
 
+        $datas = $post->load('user', 'category');
+        $users = User::select('email')->get();
+        foreach($users as $user){
+            Mail::to($user->email)->send(new BroadCastNotification($datas));
+        }
         session()->flash('message', 'Post created successfully.');
 
-        return redirect()->route('user.posts');
+        return redirect()->route('posts');
     }
 
     public function edit(Post $post)
@@ -104,10 +119,11 @@ class PostController extends Controller
 
             session()->flash('message', "You can't edit other peoples post.");
 
-            return redirect()->route('user.posts');
+            return redirect()->route('posts');
         }
 
-        return view('user.posts.edit', compact('post'));
+        $categories = Category::get();
+        return view('user.posts.edit', compact('post', 'categories'));
     }
 
     public function update(Request $request, Post $post)
@@ -144,13 +160,13 @@ class PostController extends Controller
 
             session()->flash('message', "You can't delete other peoples post.");
 
-            return redirect()->route('user.posts');
+            return redirect()->route('posts');
         }
 
         $post->delete();
 
         session()->flash('message', 'Post deleted successfully.');
 
-        return redirect()->route('user.posts');
+        return redirect()->route('posts');
     }
 }

@@ -22,7 +22,7 @@ class CategoryController extends Controller
             ->withCount('comments')
             ->published()
             ->orderBy('created_at', 'DESC')
-            ->paginate(5);
+            ->paginate(10);
         
         return view('category.index', compact('posts', 'category'));
     }

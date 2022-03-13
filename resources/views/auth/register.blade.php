@@ -1,59 +1,66 @@
-@extends('layouts.register')
+@extends('layouts.app')
 
 @section('body')
-    <form class="form-signin" action="{{ route('register') }}" method="POST">
-        @csrf
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+        <div class="card" style="margin-top: 30px">
+                <div class="card-body">
+                    <img class="rounded mx-auto d-block logo" src="assets/img/logo.jpeg" alt="">
+                    <form method="POST" action="{{ route('register') }}">
+                        @csrf
 
-        <h1 class="h3 mb-3 font-weight-normal">Créer un compte</h1>
+                        <div class="row mb-3">
 
-        <div class="form-group">
-            <label for="inputName" class="sr-only">Nom d'utilisateur</label>
-            <input type="text" name="name" class="form-control" placeholder="Nom" value="{{ old('name') }}" required="">
+                            <div class="col-md-12">
+                                <input id="name" type="text" placeholder="Nom" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
-            @error('name')
-                <span class="text-danger" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+
+                            <div class="col-md-12">
+                                <input id="email" type="email" placeholder="Addresse email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <input id="password" placeholder="Mot de passe" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <input id="password-confirm" placeholder="Confirmation du mot de passe" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                        </div>
+
+                        <button class="btn btn-lg btn1 text-white btn-block" type="submit">S'inscrire </button>
+                        <p class="mt-5 mb-3 text-muted text-center">© {{ config('app.name').' '.now()->year}}</p>
+                        <p class="text-center">Déjà membre {{ config('app.name', 'Laravel') }}? <a href="{{ url('connexion') }}" class="fg1">Connexion</a></p>
+                    </form>
+                </div>
+            </div>
         </div>
-
-        
-        <div class="form-group">
-            <label for="inputEmail" class="sr-only">Adresse e-mail</label>
-            <input type="email" name="email" class="form-control" placeholder="E-mail" value="{{ old('email') }}" required="">
-
-            @error('email')
-                <span class="text-danger" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-        
-        <div class="form-group">
-            <label for="inputPassword" class="sr-only">Mot de passe</label>
-            <input type="password" name="password" class="form-control" placeholder="Mot de passe" required="">
-
-            @error('password')
-                <span class="text-danger" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-
-        <div class="form-group">
-            <label for="inputPasswordConfirmation" class="sr-only">Confirmation mot de passe</label>
-            <input type="password" name="password_confirmation" class="form-control" placeholder="Confirmation" required="">
-
-            @error('password_confirmation')
-                <span class="text-danger" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">S'inscrire</button>
-
-    
-        <a  href="{{ url('/') }}"><p class="mt-5 mb-3 text-muted">© {{ config('app.name').' '.now()->year}}</p></a>
-        <p>Vous avez déjà un compte? <a href="{{ route('login') }}">Connectez-vous ici</a></p>
-    </form>
+    </div>
+</div>
 @endsection

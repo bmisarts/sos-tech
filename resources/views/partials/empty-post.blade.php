@@ -3,7 +3,7 @@
     <p class="lead">Nous n'avons pas trouvé le poste que vous recherchez.</p>
     <hr class="my-4">
     <p class="lead">
-        <a class="btn btn-outline-primary" href="{{ route('user.posts.create') }}" role="button">
+        <a class="btn btn-outline-primary" href="{{ route('post_create') }}" role="button">
             Cliquez ici pour commencer à ajouter des publications.
         </a>
     </p>

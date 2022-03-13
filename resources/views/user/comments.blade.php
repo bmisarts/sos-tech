@@ -12,7 +12,7 @@
                     <div class="card-title d-flex justify-content-between align-items-center">
                         <span class="display-4"> Commentaires</span>
                         
-                        {{-- <a href="{{ route('user.categories.create') }}" class="btn btn-primary">Create New</a> --}}
+                        {{-- <a href="{{ route('categorie_create') }}" class="btn btn-primary">Create New</a> --}}
                         
                     </div>
                     
@@ -33,7 +33,7 @@
                                     <td>{{ $comment->post->title }}</td>
 
                                     <td class="d-flex">
-                                        <form action="{{ route('user.comments.destroy', $comment) }}" method="POST">
+                                        <form action="{{ route('comment_destroy', $comment) }}" method="POST">
                                             @csrf @method('DELETE')
 
                                             <button class="btn btn-xs  btn1 text-white" type="submit">Supprimer</button>
@@ -42,7 +42,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="6">No categories available.</td>
+                                    <td class="text-center" colspan="6">Aucun commentaire disponible.</td>
                                 </tr>
                             @endforelse
                         </tbody>

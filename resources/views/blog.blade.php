@@ -40,10 +40,11 @@
                         </div>
                         <div class="card-footer text-muted">
                             {{ $post->created_at->diffForHumans() }} par <a href="#">{{ $post->user->name }}</a>
-                            <span class="badge badge-pill float-right btn2  text-white">Commentaires {{ $post->comments_count }}</span>
+                            <span class="badge badge-pill float-right btn2  text-white">Commentaires {{ $post->comments->count() }}</span>
                         </div>
                     </div>
                 @endforeach
+                {{ $posts->links() }}
             </div>
 
             @include('includes.sidebar')

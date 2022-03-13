@@ -1,7 +1,7 @@
 <div class="card my-4">
     <h5 class="card-header fg1">Commentaire</h5>
     <div class="card-body">
-        <form action="{{ route('post.comment', $post) }}" method="POST">
+        <form action="{{ route('post_comment', $post) }}" method="POST">
             @csrf
 
             <div class="form-group">

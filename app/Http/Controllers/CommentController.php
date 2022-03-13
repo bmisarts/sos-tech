@@ -16,14 +16,14 @@ class CommentController extends Controller
     {
         if($comment->user_id != auth()->user()->id && auth()->user()->isNotAdmin()) {;
             return redirect()
-                ->route('user.comments')
+                ->route('comments')
                 ->withMessage("You can't delete other peoples comment.");;
         }
 
         $comment->delete();
 
         return redirect()
-            ->route('user.comments')
+            ->route('comments')
             ->withMessage('Comment deleted successfully.');
     }
 }

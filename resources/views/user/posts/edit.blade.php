@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="card-body">
-                <form action="{{ route('user.posts.update', $post) }}" method="POST">
+                <form action="{{ route('post_update', $post) }}" method="POST">
                     @csrf
                     @method('PATCH')
 
@@ -60,11 +60,11 @@
                         <div class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" name="publish" id="publish-post" @if($post->is_published) checked @endif>
-                                <label class="custom-control-label" for="publish-post">Do you want to publish this post?</label>
+                                <label class="custom-control-label" for="publish-post">Voulez-vous publier ce post?</label>
                             </div>
                         </div>
 
-                        <button class="btn btn-primary" type="submit">Update</button>
+                        <button class="btn btn-primary" type="submit">Modifier</button>
 
                     </form>
                 </div>

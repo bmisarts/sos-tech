@@ -5,20 +5,21 @@
         </div>
         <div class="row g-5">
             <div class="col-lg-7 wow slideInUp" data-wow-delay="0.3s">
-                <div class="bg-light rounded p-5">
-                    <form>
+                <div class="bg-light rounded p-2 pb-3">
+                    <form method="POST" action="{{ route('sendemail') }}">
+                        @csrf
                         <div class="row g-3">
-                            <div class="col-6">
-                                <input type="text" class="form-control border-0 px-4" placeholder="Nom" style="height: 55px;">
-                            </div>
-                            <div class="col-6">
-                                <input type="email" class="form-control border-0 px-4" placeholder="Email" style="height: 55px;">
+                            <div class="col-12">
+                                <input type="text" class="form-control border-0 px-4" name="name" placeholder="Nom" style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <input type="text" class="form-control border-0 px-4" placeholder="Sujet" style="height: 55px;">
+                                <input type="email" class="form-control border-0 px-4" name="email" placeholder="Email" style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control border-0 px-4 py-3" rows="8" placeholder="Message"></textarea>
+                                <input type="text" class="form-control border-0 px-4" name="subject" placeholder="Sujet" style="height: 55px;">
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control border-0 px-4 py-3" name="message" rows="8" placeholder="Message"></textarea>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn1 w-100 py-3 text-white" type="submit">Envoyer</button>
