@@ -15,10 +15,16 @@ class UserController extends Controller
         $this->middleware('auth');
     }
 
+    public function index()
+    {
+        $users = User::paginate(10);
+        return view('user.index', compact('users'));
+    }
     public function profile()
     {
         return view('user.profile');
     }
+
 
     public function dashboard()
     {
@@ -40,7 +46,7 @@ class UserController extends Controller
 
     public function categories()
     {
-        $categories = Category::paginate(5);
+        $categories = Category::get();
         return view('user.categories', compact('categories'));
     }
 
