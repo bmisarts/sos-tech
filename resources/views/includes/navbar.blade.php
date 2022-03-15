@@ -29,7 +29,7 @@
 
                 <div class="dropdown-menu dropdown-menu-right last-li" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
-                    <a class="dropdown-item" href="{{ route('users') }}">Utilisateurs</a>
+                    <a class="dropdown-item" href="{{ route('userslist') }}">Utilisateurs</a>
                     <a class="dropdown-item" href="{{ route('profile') }}">Profile</a>
                     <a class="dropdown-item" href="{{ route('posts') }}">Posts</a>
                     <a class="dropdown-item" href="{{ route('categories') }}">Categories</a>

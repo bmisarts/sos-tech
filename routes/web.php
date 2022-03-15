@@ -38,7 +38,7 @@ Route::post('posts/{post}/comment', 'PostController@comment')->name('post_commen
 Route::get('categories/{category}', 'CategoryController@index')->name('category_post');
 
 // Authenticated User Routes
-Route::get('users', 'UserController@index')->name('users');
+Route::get('userslist', 'UserController@index')->name('userslist');
 Route::get('dashboard', 'UserController@dashboard')->name('dashboard');
 Route::get('profile', 'UserController@profile')->name('profile');
 Route::get('posts', 'UserController@posts')->name('posts');
