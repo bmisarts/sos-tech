@@ -39,6 +39,7 @@ class UserController extends Controller
     public function posts()
     {
         $posts = Post::with(['user', 'category', 'comments'])
+            ->orderBy('created_at', 'DESC')
             ->paginate(10);
 
         return view('user.posts', compact('posts'));
@@ -46,7 +47,7 @@ class UserController extends Controller
 
     public function categories()
     {
-        $categories = Category::get();
+        $categories = Category::orderBy('created_at', 'DESC')->get();
         return view('user.categories', compact('categories'));
     }
 

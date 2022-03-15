@@ -39,7 +39,7 @@ class CategoryController extends Controller
         Category::create($request->only('name'));
 
         return redirect()
-            ->route('user.categories')
+            ->route('categories')
             ->withMessage('Category created successfully');
     }
 
@@ -47,7 +47,7 @@ class CategoryController extends Controller
     {
         if(auth()->user()->isNotAdmin()) {
             return redirect()
-                ->route('user.categories')
+                ->route('categories')
                 ->withMessage("Only admin can edit categories.");
         }
 
@@ -58,7 +58,7 @@ class CategoryController extends Controller
     {
         if(auth()->user()->isNotAdmin()) {
             return redirect()
-                ->route('user.categories')
+                ->route('categories')
                 ->withMessage("Only admin can update categories.");
         }
 
@@ -67,7 +67,7 @@ class CategoryController extends Controller
         $category->update($request->only('name'));
 
         return redirect()
-            ->route('user.categories')
+            ->route('categories')
             ->withMessage('Category updated successfully');
     }
     
@@ -76,13 +76,13 @@ class CategoryController extends Controller
     {
         if(auth()->user()->isNotAdmin()) {
             return redirect()
-                ->route('user.categories')
+                ->route('categories')
                 ->withMessage("Only admin can delete categories.");
         }
 
         $category->delete();
 
-        return redirect()->route('user.categories');
+        return redirect()->route('categories');
     }
 
 }
