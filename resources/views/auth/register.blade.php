@@ -50,7 +50,7 @@
 
                         <div class="row mb-3">
                             <div class="col-md-12">
-                                <input id="password-confirm" placeholder="Confirmation du mot de passe" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" placeholder="Confirmation" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
 

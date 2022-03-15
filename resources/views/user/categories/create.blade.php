@@ -10,7 +10,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header bg1 text-white">
-                    Créer une catégorie
+                    Nouvelle catégorie
                 </div>
 
                 <div class="card-body">
@@ -27,7 +27,7 @@
                             @enderror
                         </div>
 
-                        <button class="btn  btn1 text-white" type="submit">Créer</button>
+                        <button class="btn  btn1 text-white" type="submit">Enregistrer</button>
 
                     </form>
                 </div>

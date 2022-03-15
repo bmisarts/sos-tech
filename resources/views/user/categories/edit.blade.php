@@ -10,7 +10,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    Edit Category
+                    Modification catégorie
                 </div>
 
                 <div class="card-body">
@@ -19,7 +19,7 @@
                     @method('PATCH')
 
                         <div class="form-group">
-                            <label for="">Name</label>
+                            <label for="">Nom</label>
                             <input type="text" name="name" value="{{ $category->name }}" required class="form-control">
 
                             @error('name')
@@ -29,7 +29,7 @@
                             @enderror
                         </div>
 
-                        <button class="btn btn-primary" type="submit">Update</button>
+                        <button class="btn btn-primary" type="submit">Modifier</button>
 
                     </form>
                 </div>

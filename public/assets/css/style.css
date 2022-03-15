@@ -43,24 +43,24 @@ html, body{
 h1,
 h2,
 .font-weight-bold {
-    font-weight: 700 !important;
+    /* font-weight: 700 !important; */
 }
 
 h3,
 h4,
 .font-weight-semi-bold {
-    font-weight: 600 !important;
+    /* font-weight: 600 !important; */
 }
 
 h5,
 h6,
 .font-weight-medium {
-    font-weight: 500 !important;
+    /* font-weight: 500 !important; */
 }
 
 .btn {
     font-family: 'Jost', sans-serif;
-    font-weight: 600;
+    /* font-weight: 600; */
     transition: .5s;
 }
 
@@ -178,12 +178,12 @@ h6,
 @media (max-width: 576px) {
     .carousel-caption h5 {
         font-size: 14px;
-        font-weight: 500 !important;
+        /* font-weight: 500 !important; */
     }
 
     .carousel-caption h1 {
         font-size: 30px;
-        font-weight: 600 !important;
+        /* font-weight: 600 !important; */
     }
 }
 

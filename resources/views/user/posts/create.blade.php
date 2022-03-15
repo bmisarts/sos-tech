@@ -10,7 +10,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    Create Post
+                    Nouveau Post
                 </div>
 
                 <div class="card-body">
@@ -19,7 +19,7 @@
 
 
                         <div class="form-group">
-                            <label for="">Title</label>
+                            <label for="">Titre</label>
                             <input type="text" name="title" value="{{ old('title') }}" required class="form-control">
 
                             @error('title')
@@ -30,7 +30,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="">Body</label>
+                            <label for="">Contenu</label>
                             <textarea name="body" required class="form-control" cols="30" rows="10">{{ old('body') }}</textarea>
 
                             @error('body')
