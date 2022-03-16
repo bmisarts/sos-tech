@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-1 px-lg-0 nav-inverse">
     <a href="{{ url('/') }}" class="navbar-brand">
-        <h1 class="display-5 m-0" style="color: #6b4f9b; transform: translateY(-10px)">S<span style="color: #b68cc8">O</span><span style="color: #6b4f9b">S</span></h1>
+        <img class ='logo' src="{{ asset('assets/images/logo.jpg') }}" alt="">    
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>

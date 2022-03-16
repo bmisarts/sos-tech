@@ -19,8 +19,8 @@
                 <div class="service-item bg-light border-bottom border-5 border-primary rounded">
                     <div class="position-relative p-5">
                         <i class="flaticon-surveillance d-block display-1 fw-normal fg2 mb-3"></i>
-                        <h5 class="fg1 mb-0">Vidéosurveillance</h5>
-                        <h3 class="mb-3">Configuration</h3>
+                        <h5 class="fg1 mb-0">Alarme</h5>
+                        <h3 class="mb-3">Installation</h3>
                     </div>
                 </div>
             </div>
@@ -37,8 +37,8 @@
                 <div class="service-item bg-light border-bottom border-5 border-primary rounded">
                     <div class="position-relative p-5">
                         <i class="flaticon-double d-block display-1 fw-normal fg2 mb-3"></i>
-                        <h5 class="fg1 mb-0">Vidéosurveillance</h5>
-                        <h3 class="mb-3">Réparation</h3>
+                        <h5 class="fg1 mb-0">Alarme</h5>
+                        <h3 class="mb-3">Maintenance</h3>
                     </div>
                 </div>
             </div>
@@ -46,8 +46,8 @@
                 <div class="service-item bg-light border-bottom border-5 border-primary rounded">
                     <div class="position-relative p-5">
                         <i class="flaticon-security-system d-block display-1 fw-normal fg2 mb-3"></i>
-                        <h5 class="fg1 mb-0">Vidéosurveillance</h5>
-                        <h3 class="mb-3">Surveillance</h3>
+                        <h5 class="fg1 mb-0">Contrôle d'accès</h5>
+                        <h3 class="mb-3">Installation</h3>
                     </div>
                 </div>
             </div>
@@ -55,8 +55,8 @@
                 <div class="service-item bg-light border-bottom border-5 border-primary rounded">
                     <div class="position-relative p-5">
                         <i class="flaticon-recorder d-block display-1 fw-normal fg2 mb-3"></i>
-                        <h5 class="fg1 mb-0">Vidéosurveillance</h5>
-                        <h3 class="mb-3">Contrôle d'accès</h3>
+                        <h5 class="fg1 mb-0">Contrôle d'accès</h5>
+                        <h3 class="mb-3">Maintenance</h3>
                     </div>
                 </div>
             </div>

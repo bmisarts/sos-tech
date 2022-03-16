@@ -6,30 +6,36 @@ html, body{
     padding-top: 15px;
 }
 .bg1{
-    background-color: #5b4385;
+    background-color: #2AAADD;
 }
 .bg2{
-    background-color: #d188f3; 
+    background-color: #2AAADD; 
 }
 .btn1{
-    background-color: #5b4385;
+    background-color: #2AAADD;
     border: none;
 }
 .btn2{
-    background-color: #d188f3; 
+    background-color: #2AAADD; 
     border: none;
 }
 .fg1{
-    color: #5b4385;
+    color: #2AAADD;
 }
 .fg2{
-    color: #d188f3;
+    color: #2AAADD;
 }
 :root {
-    --primary: #5b4385;
-    --secondary: #d188f3;
+    --primary: #2AAADD;
+    --secondary: #2AAADD;
     --light: #ECF4FF;
     --dark: #120F2D;
+}
+.logo{
+    padding-left: 30px;
+    width: 120px;
+    height: 60px;
+    transform: translateY(-10px);
 }
 
 [class^=flaticon-]:before,
@@ -307,6 +313,6 @@ h6,
     top: -25px;
     left: 0;
     border: 13px solid;
-    border-color: transparent #d188f3 #d188f3 transparent;
+    border-color: transparent #2AAADD #2AAADD transparent;
     z-index: -1;
 }

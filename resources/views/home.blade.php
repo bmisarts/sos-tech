@@ -66,6 +66,7 @@
     @include('includes.service')
     <!-- Services End -->
 
+    @include('includes.team')
 
     <!-- clients satisfaits -->
     @include('includes.partners')
