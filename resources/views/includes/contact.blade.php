@@ -41,7 +41,7 @@
                         <i class="bi bi-envelope-open fs-1 fg2 me-3"></i>
                         <div class="text-start">
                             <h5 class="mb-1">Email</h5>
-                            <span>sosservicestech@sosservicestech.com</span>
+                            <span>contact@sosservicestech.com</span>
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-4">

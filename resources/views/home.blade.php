@@ -62,16 +62,8 @@
     
 
     <!-- Services Start -->
-   
     @include('includes.service')
     <!-- Services End -->
-
-    @include('includes.team')
-
-    <!-- clients satisfaits -->
-    @include('includes.partners')
-    <!-- clients satisfaits -->
-
 
     <!-- Offer Start -->
     <div class="container-fluid bg-offer my-5 py-5 wow zoomIn" data-wow-delay="0.1s">
@@ -206,7 +198,7 @@
         <div class="container">
             <div class="text-center mx-auto mb-5" style="max-width: 600px;">
                 <h5 class="fg1">Blog</h5>
-                <h1 class="display-5 mb-0">Derniers articles du blog</h1>
+                <h1 class="display-5 mb-0">Derniers Articles</h1>
             </div>
             <div class="row g-5">
                 @foreach($posts as $post)
@@ -232,6 +224,12 @@
             </div>
         </div>
     </div>
+    <!-- Blog End -->
+    
+    <!-- Partners -->
+    @include('includes.partners')
+    <!-- Partners -->
+
     <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=2048&amp;height=400&amp;hl=en&amp;q=LM Consulting & Technology&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://kokagames.com/">FNF</a></div><style>.mapouter{position:relative;text-align:right;width:2048px;height:400px;transform: translateY(50px)}.gmap_canvas {overflow:hidden;background:none!important;width:2048px;height:400px;}.gmap_iframe {width:2048px!important;height:400px!important;}</style></div>
 
     

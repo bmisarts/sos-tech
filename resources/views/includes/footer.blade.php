@@ -15,7 +15,7 @@
             <div class="col-lg-4 col-md-6">
                 <h3 class="text-white mb-4">Contact</h3>
                 <p class="mb-2"><i class="bi bi-geo-alt me-2"></i>Makepe, saint Tropez, Douala Cameroun</p>
-                <p class="mb-2"><i class="bi bi-envelope-open me-2"></i><a class="text-white" href="mailto:sosservicestech@sosservicestech.com">sosservicestech@sosservicestech.com</a></p>
+                <p class="mb-2"><i class="bi bi-envelope-open me-2"></i><a class="text-white" href="mailto:contact@sosservicestech.com">contact@sosservicestech.com</a></p>
                 <p class="mb-0"><i class="bi bi-telephone me-2"></i>+237 652 061 510 / +237 6 55 07 71 19</p>
             </div>
             <div class="col-lg-4 col-md-6">

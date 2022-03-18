@@ -6,7 +6,7 @@
         <div class="col-md-6">
         <div class="card" style="margin-top: 30px">
                 <div class="card-body">
-                    <img class="rounded mx-auto d-block logo" src="assets/img/logo.jpeg" alt="">
+                    <img class="rounded mx-auto d-block logo" src="{{ asset('assets/images/logo.jpg') }}" alt="">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 

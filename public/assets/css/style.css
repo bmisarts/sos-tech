@@ -2,7 +2,8 @@
 /********** Template CSS **********/
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Serif&family=PT+Serif&family=Playfair+Display&family=Poppins:wght@200;400&display=swap');
 html, body{
-    font-family: 'Libre Baskerville', serif;
+    /* font-family: 'Libre Baskerville', serif; */
+    font-family: 'Jost', sans-serif;
     padding-top: 15px;
 }
 .bg1{
@@ -32,12 +33,21 @@ html, body{
     --dark: #120F2D;
 }
 .logo{
-    padding-left: 30px;
+    margin: 50px;
     width: 120px;
     height: 60px;
     transform: translateY(-10px);
 }
-
+.client{
+    width: 100px;
+}
+.partner{
+    width: 100px;
+    height: 100px;
+}
+.team-image{
+    height: 350px;
+}
 [class^=flaticon-]:before,
 [class*=" flaticon-"]:before,
 [class^=flaticon-]:after,
@@ -49,24 +59,24 @@ html, body{
 h1,
 h2,
 .font-weight-bold {
-    /* font-weight: 700 !important; */
+    font-weight: 700 !important;
 }
 
 h3,
 h4,
 .font-weight-semi-bold {
-    /* font-weight: 600 !important; */
+    font-weight: 600 !important;
 }
 
 h5,
 h6,
 .font-weight-medium {
-    /* font-weight: 500 !important; */
+    font-weight: 500 !important;
 }
 
 .btn {
     font-family: 'Jost', sans-serif;
-    /* font-weight: 600; */
+    font-weight: 600;
     transition: .5s;
 }
 
@@ -117,12 +127,16 @@ h6,
     bottom: 45px;
     z-index: 99;
 }
-
+.navbar{
+    height: auto;
+    position: relative;
+    width: 100%;
+}
 .navbar-light .navbar-nav .nav-link {
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
     margin-bottom: 0px;
     margin-top: 0px;
-    margin-right: 20px;
     padding: 0px 0px;
     padding-bottom: 0px 0px;
     font-size: 20px;
@@ -190,6 +204,9 @@ h6,
     .carousel-caption h1 {
         font-size: 30px;
         /* font-weight: 600 !important; */
+    }
+    #toHide{
+        display: none;
     }
 }
 
