@@ -328,3 +328,6 @@ h6,
     border-color: transparent #2AAADD #2AAADD transparent;
     z-index: -1;
 }
+.border-secondary {
+    border-color: #2AAADD !important;
+}

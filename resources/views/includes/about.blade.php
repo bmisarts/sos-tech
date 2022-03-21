@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="mb-4">
-                        <h5 class="fg1">A propos de nous</h5>
+                        <h5 class="fg1">A propos</h5>
                         <h6 class="display-5 mb-0">SOS Services & Technologie</h6>
                     </div>
                     <p class="mb-4">Nous sommes une entreprise camerounaise spécialisée dans l'installation des caméras de surveillance, SOS Services & Technologie vous offre des services de sécurité efficaces et modernes pour vos différents locaux et entreprises.</p>
