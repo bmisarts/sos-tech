@@ -40,6 +40,8 @@
 
 
             <!-- Post Content -->
+
+            <img src="{{ '/'.$post->image }}" alt="" style="width:100%">
             <p class="lead">{{ $post->body }}</p>
 
             <hr>

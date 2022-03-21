@@ -52,7 +52,7 @@
                             <span>+237 655 077 119</span>
                         </div>
                     </div>
-                    <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=350&amp;height=190&amp;hl=en&amp;q=LM Consulting & Technology&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://kokagames.com/">FNF</a></div><style>.mapouter{position:relative;text-align:right;width:350px;height:185px;}.gmap_canvas {overflow:hidden;background:none!important;width:350px;height:190px;}.gmap_iframe {width:350px!important;height:190px!important;}</style></div>                    </div>
+                    <div  id="toHide" class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=350&amp;height=190&amp;hl=en&amp;q=LM Consulting & Technology&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://kokagames.com/">FNF</a></div><style>.mapouter{position:relative;text-align:right;width:350px;height:185px;}.gmap_canvas {overflow:hidden;background:none!important;width:350px;height:190px;}.gmap_iframe {width:350px!important;height:190px!important;}</style></div>                    </div>
             </div>
         </div>
     </div>

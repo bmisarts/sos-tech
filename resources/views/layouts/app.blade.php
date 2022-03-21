@@ -32,64 +32,6 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Serif&family=PT+Serif&family=Playfair+Display&family=Poppins:wght@200;400&display=swap');
-        html, body{
-            font-family: 'Libre Baskerville', serif;
-            padding-top: 15px;
-        }
-        .bg1{
-            background-color: #5b4385;
-        }
-        .bg2{
-            background-color: #d188f3; 
-        }
-        .btn1{
-            background-color: #5b4385;
-            border: none;
-        }
-        .btn2{
-            background-color: #d188f3; 
-            border: none;
-        }
-        .fg1{
-            color: #5b4385;
-        }
-        .fg2{
-            color: #d188f3;
-        }
-        :root {
-            --primary: #5b4385;
-            --secondary: #d188f3;
-            --light: #ECF4FF;
-            --dark: #120F2D;
-        }
-                
-        .back-to-top {
-            position: fixed;
-            display: none;
-            right: 45px;
-            bottom: 45px;
-            z-index: 99;
-        }
-
-        .navbar-light .navbar-nav .nav-link {
-            margin-left: 20px;
-            margin-bottom: 0px;
-            margin-top: 0px;
-            margin-right: 20px;
-            padding: 0px 0px;
-            padding-bottom: 0px 0px;
-            font-size: 20px;
-            font-weight: 500;
-            color: var(--dark);
-            outline: none;
-            position: relative;
-            transition: .5s;
-        }
-    </style>
 </head>
 
 <body>
