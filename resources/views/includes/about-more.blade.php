@@ -6,5 +6,4 @@
                 SOS Services & Technologie dispose d’un service après-vente pour toutes installations, éventuelles réparations ou pannes des équipements.
             </p>
             @include('includes.team')
-            @include('includes.clients')
    @endsection
