@@ -62,6 +62,10 @@
         ],
         "post-install-cmd": [
             "php artisan clear-compiled",
+            "php artisan view:clear",
+            "php artisan cache:clear",
+            "php artisan config:clear",
+            "rm -rf bootstrap/cache/*/*",
             "chmod -R 777 public/"
         ]
     }
