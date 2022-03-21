@@ -129,6 +129,9 @@ h6,
 .navbar{
     padding-left: 10px;
 }
+.vision{
+    /* margin-right: 5px; */
+}
 .navbar-light .navbar-nav .nav-link {
     margin-left: 10px;
     margin-right: 20px;

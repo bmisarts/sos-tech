@@ -22,24 +22,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s" style="height: auto">
-                    <div class="service-item bg-light border-bottom border-5 border-primary rounded">
-                        <div class="position-relative p-4">
-                            <h5 class="fg1 mb-0">Vision</h5> <br>
-                            <p class="">Atteindre 25% des parts du marche d'ici 2025 sur le territoire natoinal et internatoinal.</p>
-                        </div>
-                    </div> <br>
-                    <div class="service-item bg-light border-bottom border-5 border-primary rounded">
-                        <div class="position-relative p-4">
-                            <h5 class="fg1 mb-0">Mission</h5> <br>
-                            <p class="">Preparation de intervention, l'installation des équipements de securite et le parametrage des systemes , la verification du bon fonctoinnement du systeme.</p>
-                        </div>
-                    </div>
+                <div class="col-lg-4 wow slideInUp align-middle" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: slideInUp;">
+                    <p>Chez SOS Services Technologie nous guidons nos clients dans la préparation, la conception, , installation et le bon fonctionnement de tout système de vidéosurveillance. Nous avons un savoir faire traversal dans tous les domaines des installations des systèmes de sécurité afin de porter tout les projets à une réussite assure. C’est pour quoi nous mettons la sécurité, modernité au service de l’innovation.</p>
                 </div>
-
-                <!-- <div class="col-lg-4 wow slideInUp align-middle" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: slideInUp;">
-                    <p>Avec pour objectif d'atteindre 25% des parts du marche d'ici 2025 sur le territoire natoinal et internatoinal, SOS Services & Technologie est une jeune entreprise dynamique, passionnée et innovatrice qui a été créée pas un jeune entrepreneur pour rendre plus sécurisé les habitations. Dans la mise sur pied des systèmes de sécurité innovants.</p>
-                    <p>Contactez-nous pour installer divers systèmes de sécurité : alarme, contrôle d’accès, caméras de surveillance… Nous sommes également en mesure de réparer, de rénover ou d’entretenir des installations existantes.</p>
-                </div> -->
             </div>
         </div>
