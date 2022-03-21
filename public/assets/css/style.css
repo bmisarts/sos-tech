@@ -331,3 +331,9 @@ h6,
 .border-secondary {
     border-color: #2AAADD !important;
 }
+.bg-primary {
+    background-color: #006f9b !important;
+}
+.text-primary {
+    color: #2AAADD !important;
+}
