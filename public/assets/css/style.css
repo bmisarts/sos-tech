@@ -126,7 +126,9 @@ h6,
     bottom: 45px;
     z-index: 99;
 }
-
+.navbar{
+    padding-left: 10px;
+}
 .navbar-light .navbar-nav .nav-link {
     margin-left: 10px;
     margin-right: 20px;
